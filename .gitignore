@@ -29,3 +29,7 @@ bazel-genfiles
 bazel-kotlin-practice
 bazel-out
 bazel-testlogs
+
+# BUCK generated
+.buckd/
+buck-out/
