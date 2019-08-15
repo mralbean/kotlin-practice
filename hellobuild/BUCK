@@ -1,0 +1,18 @@
+kotlin_library(
+  name = 'hellobuild',
+  srcs = [
+    'HelloBuild.kt'
+  ],
+)
+
+kotlin_test(
+  name = 'hellobuild-test',
+  srcs = [
+    'HelloBuildTest.kt'
+  ],
+  deps = [
+    ':hellobuild',
+    '//third_party/junit:junit',
+    '//third_party/kotlin_test:kotlin-test'
+  ]
+)
