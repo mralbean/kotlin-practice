@@ -10,8 +10,8 @@ def kt_test(name, srcs=[], friends=[], deps=[], test_class="", visibility=None):
     deps (List[Label]): Dependent kt_jvm_library targets needed to build srcs.
     visibility (List[Label]): Visibility targets.
   """
-  kotlinTestDep = Label("@com_github_jetbrains_kotlin//:kotlin-test")
-  junitDep = Label("//external:jar/io_bazel_rules_kotlin_junit/junit")
+  kotlinTestDep = Label("//third_party/kotlin_test:kotlin-test")
+  junitDep = Label("//third_party/junit:junit")
 
   kt_jvm_test(
     name=name,
