@@ -10,22 +10,16 @@ import kotlin.test.assertEquals
  */
 class HelloBuildTest {
   companion object {
-    @BeforeClass
-    @JvmStatic
-    fun beforeAllTestCases() {
+    @BeforeClass @JvmStatic fun beforeAllTestCases() {
       println("Begin Tests")
     }
 
-    @AfterClass
-    @JvmStatic
-    fun afterAllTestCases() {
-      println("Tests Complete")
+    @AfterClass @JvmStatic fun afterAllTestCases() {
+      println("Begin Tests")
     }
   }
 
-
-  @Test
-  fun simpleTestCase() {
+  @Test fun simpleTestCase() {
     val build = HelloBuild("Alvin Portillo")
     assertEquals("Alvin Portillo", build.name)
   }
