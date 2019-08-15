@@ -1,0 +1,19 @@
+prebuilt_jar(
+  name = 'junit-jar',
+  binary_jar = 'junit-4.12.jar',
+  source_jar = "junit-4.12-sources.jar",
+  visibility = [
+    'PUBLIC',
+  ],
+)
+
+kotlin_library(
+  name = 'junit',
+  exported_deps = [
+    ':junit-jar',
+    '//third_party/hamcrest:hamcrest-core'
+  ],
+  visibility = [
+    'PUBLIC',
+  ],
+)
