@@ -1,0 +1,19 @@
+kotlin_library(
+  name = 'list',
+  srcs = [
+    'List.kt',
+    'LinkedList.kt'
+  ],
+)
+
+kotlin_test(
+  name = 'linkedlist-test',
+  srcs = [
+    'LinkedListTest.kt'
+  ],
+  deps = [
+    ':list',
+    '//third_party/junit:junit',
+    '//third_party/kotlin_test:kotlin-test'
+  ]
+)
