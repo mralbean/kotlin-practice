@@ -1,0 +1,18 @@
+kotlin_library(
+  name = 'stack',
+  srcs = [
+    'Stack.kt',
+  ],
+)
+
+kotlin_test(
+  name = 'stack-test',
+  srcs = [
+    'StackTest.kt'
+  ],
+  deps = [
+    ':stack',
+    '//third_party/junit:junit',
+    '//third_party/kotlin_test:kotlin-test'
+  ]
+)
